@@ -1,3 +1,5 @@
+import "./style.css";
+
 import './style.css'
 
 
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
    const searchGoogle = () => {
     const query = searchInput.value;
     if(query){
-        const url = `https://www.google.com/search?q=${query}`
+        const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
         window.location.href = url;
     }
     else{
